@@ -20,12 +20,15 @@ function CustomNavbar() {
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
             <NavDropdown title="Products" id="navbarScrollingDropdown">
-              <LinkContainer to="#all-products">
+              <LinkContainer to="Products">
                 <NavDropdown.Item>All Products</NavDropdown.Item>
               </LinkContainer>
               <NavDropdown.Divider />
-              <LinkContainer to="#charts">
+              <LinkContainer to="charts">
                 <NavDropdown.Item>Charts</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="charts">
+                <NavDropdown.Item>slides</NavDropdown.Item>
               </LinkContainer>
               {/* Add LinkContainer to other NavDropdown items as needed */}
             </NavDropdown>
