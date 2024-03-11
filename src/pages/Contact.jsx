@@ -1,4 +1,6 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 
 function ContactUs() {
   const [email, setEmail] = useState('');
@@ -7,7 +9,8 @@ function ContactUs() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Submitted:', { email, message });
+    console.log('Submitted:', { email, number, message });
+    toast.success("Message sent successfully!");
   };
 
   return (
@@ -17,8 +20,7 @@ function ContactUs() {
           Contact Us
         </h1>
         <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center">
-          We&apos;re here to help with any questions about our product,
-           or services. Reach out and let us know how we can assist you.
+          We&apos;re here to help with any questions about our product, or services. Reach out and let us know how we can assist you.
         </p>
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           <input
@@ -52,6 +54,7 @@ function ContactUs() {
             Send Message
           </button>
         </form>
+        <ToastContainer />
       </div>
     </div>
   );
