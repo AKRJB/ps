@@ -4,12 +4,13 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { NavLink } from 'react-router-dom';
 
 function CustomNavbar() {
   return (
     <Navbar expand="lg" className="navbar navbar-dark bg-dark">
       <Container fluid>
-        <Navbar.Brand href="/">Pioneer Scientific Industries</Navbar.Brand>
+        <Navbar.Brand to ="/">Pioneer Scientific Industries</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -17,18 +18,18 @@ function CustomNavbar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href='/'>Home</Nav.Link>
+            <NavLink className="text-white" to ='/'>Home</NavLink>
             <NavDropdown title="Products" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#all-products">All Products</NavDropdown.Item>
+                <NavDropdown.Item to ="#all-products">All Products</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#charts">Charts</NavDropdown.Item>
-                <NavDropdown.Item href="#microscopic-slides">Microscopic Slides</NavDropdown.Item>
-                <NavDropdown.Item href="#medical-charts">Medical Charts-Models</NavDropdown.Item>
-                <NavDropdown.Item href="#technical-institutes">Technical Institutes</NavDropdown.Item>
-                <NavDropdown.Item href="#nursing">Nursing</NavDropdown.Item>
+                <NavDropdown.Item to ="#charts">Charts</NavDropdown.Item>
+                <NavDropdown.Item to ="#microscopic-slides">Microscopic Slides</NavDropdown.Item>
+                <NavDropdown.Item to ="#medical-charts">Medical Charts-Models</NavDropdown.Item>
+                <NavDropdown.Item to ="#technical-institutes">Technical Institutes</NavDropdown.Item>
+                <NavDropdown.Item to ="#nursing">Nursing</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href='/contact'>Contact us</Nav.Link>
-            <Nav.Link href="/about">About us</Nav.Link>
+            <NavLink className="text-white" to ='/contact'>Contact us</NavLink>
+            <NavLink className="text-white" to ="/about">About us</NavLink>
 
           </Nav>
           <Form className="d-flex">
